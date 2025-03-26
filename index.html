@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OAM Restaurant</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body class="bg-gray-100 text-black">
+    <main>
+      <!-- Header Section -->
+      <header class="bg-black shadow-md p-4">
+        <div class="container mx-auto flex justify-between items-center">
+          <h1 class="text-2xl text-white font-bold hover:cursor-pointer">
+            OAM Restaurant
+          </h1>
+          <nav>
+            <ul
+              class="flex hidden md:flex pt-8 space-x-6 md:gap-5 lg:gap-8 text-white"
+            >
+              <li><a href="#home" class="hover:text-gray-600">Home</a></li>
+              <li><a href="#menu" class="hover:text-gray-600">Menu</a></li>
+              <li><a href="#about" class="hover:text-gray-600">About</a></li>
+              <li>
+                <a href="#contact" class="hover:text-gray-600">Contact</a>
+              </li>
+            </ul>
+            <div class="md:flex items-center gap-3.5 md:gap-5 lg:gap-8">
+              <i class="fa-regular fa-bars"></i>
+              <!-- Menu Toggle Button -->
+              <button
+                id="menu-toggle"
+                class="w-10 h-5 flex md:hidden flex-col justify-between items-center group z-[1000]"
+              >
+                <span class="block w-6 h-[2px] bg-white"></span>
+                <span class="block w-6 h-[2px] bg-white"></span>
+                <span class="block w-6 h-[2px] bg-white"></span>
+              </button>
+
+              <!-- Mobile Menu -->
+              <div
+                id="mobile-menu"
+                class="hidden fixed inset-0 bg-black bg-opacity-90 z-50 flex flex-col items-center justify-center space-y-6 text-white text-2xl transition ease-out delay-300 duration-500"
+              >
+                <a href="#home" class="hover:text-gray-500">Home</a>
+                <a href="#menu" class="hover:text-gray-500">Menu</a>
+                <a href="#about" class="hover:text-gray-500">About</a>
+                <a href="#contact" class="hover:text-gray-500">Contact</a>
+                <button id="close-menu" class="text-red-500 text-xl mt-4">
+                  Close
+                </button>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- Hero Section -->
+      <section
+        id="home"
+        class="relative h-[400px] bg-cover bg-center text-white flex items-center justify-center"
+      >
+        <div class="text-center bg-none bg-opacity-50 p-6 rounded-lg">
+          <h2 class="text-4xl text-black font-bold mb-4">
+            Welcome to OAM Restaurant
+          </h2>
+          <a
+            href="#menu"
+            class="bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-800"
+            >View Menu</a
+          >
+        </div>
+      </section>
+      <section
+        class="relative h-[400px] bg-cover bg-center text-white flex items-center justify-center"
+        style="
+          background-image: url('./Img/annie-spratt-R3LcfTvcGWY-unsplash.jpg');
+        "
+      ></section>
+      <!-- Menu Section -->
+      <section id="menu" class="py-16">
+        <div class="container mx-auto text-center">
+          <h2 class="text-3xl font-bold mb-6">Our Menu</h2>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 shadow-md rounded-lg">
+              <img
+                src="./Img/Amala_and_Gbegiri_with_Ewedu_soup-1.jpg"
+                class="w-full h-48 object-cover rounded-lg"
+                alt="Amala"
+              />
+              <h3 class="text-xl font-bold mt-4">Abula Special</h3>
+              <p class="text-gray-600">
+                OAM special abula with Amala, gbegiri, Ewedu and Omi Obe. Select
+                your choice of Protein.
+              </p>
+              <span class="block mt-2 font-bold text-lg">₦3000</span>
+              <a
+                target="_blank"
+                class="text-red-500 text-sm font-medium hover:underline transition-all flex items-start"
+                href=""
+                >Order Now</a
+              >
+            </div>
+            <div class="bg-white p-6 shadow-md rounded-lg">
+              <img
+                src="./Img/21-EwaAgoyin.jpg"
+                class="w-full h-48 object-cover rounded-lg"
+                alt="Beans"
+              />
+              <h3 class="text-xl font-bold mt-4">EwaAgoyin</h3>
+              <p class="text-gray-600">
+                Delicious plate of EwaAgoyin, with smoky fried stew, sitting
+                pretty beside golden plantain.
+              </p>
+              <span class="block mt-2 font-bold text-lg">₦6000</span>
+              <a
+                target="_blank"
+                class="text-red-500 text-sm font-medium hover:underline transition-all flex items-start"
+                href=""
+                >Order Now</a
+              >
+            </div>
+            <div class="bg-white p-6 shadow-md rounded-lg">
+              <img
+                src="./Img/yam porridge.jpg"
+                class="w-full h-48 object-cover rounded-lg"
+                alt="Yam Porridge"
+              />
+              <h3 class="text-xl font-bold mt-4">Yam Porridge</h3>
+              <p class="text-gray-600">
+                Soft yam cooked in rich spices and veggies. Pick your protein:
+                Beef, Fish, Chicken, or Prawns.
+              </p>
+              <span class="block mt-2 font-bold text-lg">₦12000</span>
+              <a
+                target="_blank"
+                class="text-red-500 text-sm font-medium hover:underline transition-all flex items-start"
+                href=""
+                >Order Now</a
+              >
+            </div>
+            <div class="bg-white p-6 shadow-md rounded-lg">
+              <img
+                src="./Img/Italian pasta_photo-1664478291780-0c67f5fb15e6.avif"
+                class="w-full h-48 object-cover rounded-lg"
+                alt="Pasta"
+              />
+              <h3 class="text-xl font-bold mt-4">Italian Pasta</h3>
+              <p class="text-gray-600">
+                Delicious homemade pasta with a rich tomato sauce.
+              </p>
+              <span class="block mt-2 font-bold text-lg">₦30000</span>
+              <a
+                target="_blank"
+                class="text-red-500 text-sm font-medium hover:underline transition-all flex items-start"
+                href=""
+                >Order Now</a
+              >
+            </div>
+            <div class="bg-white p-6 shadow-md rounded-lg">
+              <img
+                src="./Img/Gourmet Burger-1550547660-d9450f859349.avif"
+                class="w-full h-48 object-cover rounded-lg"
+                alt="Burger"
+              />
+              <h3 class="text-xl font-bold mt-4">Gourmet Burger</h3>
+              <p class="text-gray-600">
+                Juicy beef patty with fresh vegetables and cheese.
+              </p>
+              <span class="block mt-2 font-bold text-lg">₦60000</span>
+              <a
+                target="_blank"
+                class="text-red-500 text-sm font-medium hover:underline transition-all flex items-start"
+                href=""
+                >Order Now</a
+              >
+            </div>
+            <div class="bg-white p-6 shadow-md rounded-lg">
+              <img
+                src="./Img/grilled steak-541851706-2048x2048.jpg"
+                class="w-full h-48 object-cover rounded-lg"
+                alt="Steak"
+              />
+              <h3 class="text-xl font-bold mt-4">Grilled Steak</h3>
+              <p class="text-gray-600">
+                Perfectly grilled steak with herbs and garlic butter.
+              </p>
+              <span class="block mt-2 font-bold text-lg">₦120000</span>
+              <a
+                target="_blank"
+                class="text-red-500 text-sm font-medium hover:underline transition-all flex items-start"
+                href=""
+                >Order Now</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- About Us Section -->
+      <section id="about" class="py-12 bg-black text-white">
+        <div class="container mx-auto grid md:grid-cols-2 gap-8 items-center">
+          <img
+            src="./Img/99-films-FS89E75gv04-unsplash.jpg"
+            class="w-full rounded-lg"
+            alt="Restaurant Interiror"
+          />
+          <div>
+            <h2 class="text-3xl font-bold mb-4">About Us</h2>
+            <p class="text-white">
+              At OAM Restaurant, we serve the finest dishes crafted with fresh
+              ingredients and passion. Our goal is to provide an unforgettable
+              dining experience with exquisite flavors and a cozy ambiance.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Contact Section -->
+      <section id="contact" class="py-16">
+        <div class="container mx-auto text-center">
+          <h2 class="text-3xl font-bold mb-6">Contact US</h2>
+          <form class="max-w-lg mx-auto bg-white p-6 shadow-md rounded-lg">
+            <input
+              type="text"
+              placeholder="Name"
+              class="w-full mb-4 p-2 border rounded-lg"
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              class="w-full mb-4 p-2 border rounded-lg"
+            />
+            <textarea
+              placeholder="Message"
+              class="w-full mb-4 p-2 border rounded-lg"
+            ></textarea>
+            <button
+              type="submit"
+              class="bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-500"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </section>
+      <!-- Footer -->
+      <footer class="bg-black text-white text-center py-4">
+        <p>&copy;@2025 OAM Restaurant. All rights reserved</p>
+      </footer>
+    </main>
+    <script src="./script.js" defer type="module"></script>
+  </body>
+</html>
