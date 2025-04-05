@@ -3,25 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="OAM Restaurant offers the finest dishes crafted with fresh ingredients. Enjoy an unforgettable dining experience."
+    />
+    <meta
+      name="keywords"
+      content="Restaurant, Fine Dining, OAM Restaurant, Menu, Contact"
+    />
+    <meta name="author" content="OAM Restaurant" />
     <title>OAM Restaurant</title>
     <link rel="stylesheet" href="./style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <style type="text/tailwindcss">
-      @theme {
-        --color-clifford: #da373d;
-      }
-    </style>
+    <style type="text/tailwindcss"></style>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
+    
   </head>
   <body class="bg-gray-100 text-black">
     <main>
       <!-- Header Section -->
       <header class="bg-black shadow-md p-3">
         <div class="container mx-auto flex justify-between items-center">
-          <h1 class="text-2xl text-white font-bold hover:text-red-600 cursor-pointer">
+          <h1
+            class="text-2xl text-white font-bold hover:text-red-600 cursor-pointer"
+          >
             OAM Restaurant
           </h1>
           <nav>
@@ -65,10 +73,7 @@
         </div>
       </header>
       <!-- Hero Section -->
-      <section
-        id="home"
-        class="relative h-[400px]  text-white flex items-center justify-center"
-      >
+      <section id="home" class="h-[600px] flex items-center justify-center">
         <div class="text-center bg-none bg-opacity-50 p-6 rounded-lg">
           <h2 class="text-4xl text-black font-bold mb-4 pb-3">
             Welcome to OAM Restaurant
@@ -81,7 +86,7 @@
         </div>
       </section>
       <section
-        class="relative h-[400px] bg-cover bg-center flex items-center justify-center"
+        class="relative h-[800px] bg-cover bg-center flex items-center justify-center"
         style="
           background-image: url('./Img/annie-spratt-R3LcfTvcGWY-unsplash.jpg');
         "
@@ -106,7 +111,7 @@
               <a
                 target="_blank"
                 class="text-red-500 text-sm font-medium hover:underline transition-all flex items-start"
-                href=""
+                href="mailto:orders@oamrestaurant.com"
                 >Order Now</a
               >
             </div>
@@ -125,7 +130,7 @@
               <a
                 target="_blank"
                 class="text-red-500 text-sm font-medium hover:underline transition-all flex items-start"
-                href=""
+                href="mailto:orders@oamrestaurant.com"
                 >Order Now</a
               >
             </div>
@@ -144,7 +149,7 @@
               <a
                 target="_blank"
                 class="text-red-500 text-sm font-medium hover:underline transition-all flex items-start"
-                href=""
+                href="mailto:orders@oamrestaurant.com"
                 >Order Now</a
               >
             </div>
@@ -162,7 +167,7 @@
               <a
                 target="_blank"
                 class="text-red-500 text-sm font-medium hover:underline transition-all flex items-start"
-                href=""
+                href="mailto:orders@oamrestaurant.com"
                 >Order Now</a
               >
             </div>
@@ -180,7 +185,7 @@
               <a
                 target="_blank"
                 class="text-red-500 text-sm font-medium hover:underline transition-all flex items-start"
-                href=""
+                href="mailto:orders@oamrestaurant.com"
                 >Order Now</a
               >
             </div>
@@ -195,10 +200,7 @@
                 Perfectly grilled steak with herbs and garlic butter.
               </p>
               <span class="block mt-2 font-bold text-lg">₦60000</span>
-              <a
-                target="_blank"
-                class="text-red-500 text-sm font-medium hover:underline transition-all flex items-start"
-                href=""
+              <a target="_blank" href="mailto:orders@oamrestaurant.com"
                 >Order Now</a
               >
             </div>
@@ -211,7 +213,7 @@
           <img
             src="./Img/99-films-FS89E75gv04-unsplash.jpg"
             class="w-full rounded-lg"
-            alt="Restaurant Interiror"
+            alt="Interior view of OAM Restaurant"
           />
           <div>
             <h2 class="text-3xl font-bold mb-4">About Us</h2>
@@ -226,24 +228,32 @@
       <!-- Contact Section -->
       <section id="contact" class="py-16">
         <div class="container mx-auto text-center">
-          <h2 class="text-3xl font-bold mb-6">Contact US</h2>
-          <form class="max-w-lg mx-auto bg-white p-6 shadow-md rounded-lg">
+          <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
+          <form
+            method="POST"
+            action="/submit-form"
+            class="max-w-lg mx-auto bg-white p-6 shadow-md rounded-lg"
+          >
             <input
               type="text"
               placeholder="Name"
+              required
               class="w-full mb-4 p-2 border rounded-lg"
             />
             <input
               type="email"
               placeholder="Email"
+              required
               class="w-full mb-4 p-2 border rounded-lg"
             />
             <textarea
+              name="message"
               placeholder="Message"
+              required
               class="w-full mb-4 p-2 border rounded-lg"
             ></textarea>
             <button
-              type="submit"
+              aria-label="Send your message"
               class="bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-500"
             >
               Send Message
@@ -253,6 +263,22 @@
       </section>
       <!-- Footer -->
       <footer class="bg-black text-white text-center py-4">
+        <div class="flex justify-center space-x-4">
+          <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook text-white"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+            <i class="fab fa-twitter text-white"></i>
+          </a>
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <i class="fab fa-instagram text-white"></i>
+          </a>
+        </div>
+
         <p>&copy;2025 OAM Restaurant. All rights reserved.</p>
       </footer>
     </main>

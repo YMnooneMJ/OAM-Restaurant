@@ -3,18 +3,23 @@ document.addEventListener("DOMContentLoaded", function () {
   const mobileMenu = document.getElementById("mobile-menu");
   const closeMenu = document.getElementById("close-menu");
 
-  menuToggle.addEventListener("click", function () {
-    mobileMenu.classList.toggle("hidden");
-  });
+  if (menuToggle && mobileMenu && closeMenu) {
+    // Toggle mobile menu visibility
+    menuToggle.addEventListener("click", function () {
+      const isHidden = mobileMenu.classList.toggle("hidden");
+      menuToggle.setAttribute("aria-expanded", !isHidden); // Accessibility
+    });
 
-  closeMenu.addEventListener("click", function () {
-    mobileMenu.classList.add("hidden");
-  });
-
-  // Close menu when clicking outside
-  mobileMenu.addEventListener("click", function (e) {
-    if (e.target === mobileMenu) {
+    // Close mobile menu when clicking the close button
+    closeMenu.addEventListener("click", function () {
       mobileMenu.classList.add("hidden");
-    }
-  });
+    });
+
+    // Close menu when clicking outside the menu
+    mobileMenu.addEventListener("click", function (e) {
+      if (e.target === mobileMenu) {
+        mobileMenu.classList.add("hidden");
+      }
+    });
+  }
 });
